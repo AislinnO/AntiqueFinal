@@ -50,11 +50,11 @@ legend{
 /* overflow-y: scroll prevents Login from moving onto next line - I think it trims the y axis */
  body{
 	padding: 5px 5px 5px 5px;
-	margin: 5px;
 	text-align: left;
+    float: left;
 	display: inline-block;
 	overflow-y: scroll;
-    position: absolute;
+    position: relative;
 	font-family: Trebuchet MS;
 	font-size: 15px;
 	color: black;

@@ -11,6 +11,7 @@
       <th>Email</th>
       <th>Address</th>
       <th>Mobile</th>
+      <th>User ID</th>
     </tr>
   </thead>
 
@@ -22,7 +23,7 @@
         <td><%= profile.email %></td>
         <td><%= profile.address %></td>
         <td><%= profile.mobile %></td>
-        <td><%= profile.user %></td>
+        <td><%= profile.user_id %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
