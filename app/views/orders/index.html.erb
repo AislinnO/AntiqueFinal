@@ -2,22 +2,24 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Order date</th>
-      <th>User</th>
-    </tr>
+  <tr>
+    <th>Order date</th>
+    <th>Order Id</th>
+    <th>User Id</th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @orders.each do |order| %>
+  <% @orders.each do |order| %>
       <tr>
         <td><%= order.order_date %></td>
-        <td><%= order.user %></td>
+        <td><%= order.id %></td>
+        <td><%= order.user_id %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 

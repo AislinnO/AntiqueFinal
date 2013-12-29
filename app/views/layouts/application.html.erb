@@ -8,10 +8,10 @@
 </head>
 
 <div id="header">
-		<header>
-		<h1>DainTea Couture</h1>
-		</header>
-	</div>
+  <header>
+    <h1>DainTea Couture</h1>
+  </header>
+</div>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
@@ -20,14 +20,18 @@
   <ul>
     <li><a href='/home'>Home</a></li>
     <li><a href='/items'>Products</a>
-    	<ol>
-						<li><%= render '/items/categoryDistinctList' %></li>
-		</ol>
-		</li>
+      <ol>
+        <li><%= render '/items/categoryDistinctList' %></li>
+      </ol>
+    </li>
     <li><a href='/cart'>Cart</a></li>
     <li><a href='/contact'>Contact</a></li>
     <li><a href='/about'>About</a></li>
     <% if user_signed_in? %><li><a href='/myprofile'>Profile</a></li>
+    <% end %>
+    <% if user_signed_in? && current_user.admin?%><li><a href='/profiles'>All Profiles</a></li>
+    <% end %>
+    <% if user_signed_in? && current_user.admin?%><li><a href='/orders'>Orders</a></li>
     <% end %>
   </ul>
 </div>
@@ -54,10 +58,10 @@
 </div>
 
 <div id="footer">
-		<p>Say hello!</p>
-		<p>DainTea Couture Ltd.</p>
-		<p>33 Made Up Street, Dublin 4, Ireland</p>
-		<p>Contact: hello@daintea-couture.ie; Ph: +353 (1) 123 4567</p>
+  <p>Say hello!</p>
+  <p>DainTea Couture Ltd.</p>
+  <p>33 Made Up Street, Dublin 4, Ireland</p>
+  <p>Contact: hello@daintea-couture.ie; Ph: +353 (1) 123 4567</p>
 </div>
 
 
