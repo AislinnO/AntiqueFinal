@@ -40,8 +40,15 @@
             <a href="/cart/<%= item.id %>">Add to Cart</a><br><br>
 
                 <td><%= link_to 'Show', item %></td>
-
-            <% end %>
+                
+			<% if user_signed_in? && current_user.admin? %>
+ 				 <div class="links">
+  				  <td><%= link_to 'Edit', edit_item_path(item) %></td> 
+   				 <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+				</div>
+			<% end %>
+    
+	<% end %>
 
 
           </div>
@@ -54,9 +61,4 @@
 
     <p><%= link_to 'New item', new_item_path %></p>
 
-    <div class="links">
-    <td><%= link_to 'Edit', edit_item_path(item) %></td> |
-    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
-
-    </div>
 <% end %>
