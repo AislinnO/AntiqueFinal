@@ -2,6 +2,8 @@
 <br />
 <h2><%=@category%></h2>
 
+<div id="Table">
+<table align="center">
 <table class="catalog">
 
   <% @items.each do |item| %>
@@ -11,16 +13,28 @@
             <%= link_to (image_tag item.image_url, :style => "height:100px"), item %>
           </div>
         </td>
+    </tr>
+    <tr>	
         <td>
           <div class="title">
             <%= link_to item.title, item %>
           </div>
+        </td>
+        <td>
           <div class="description">
             <%=h item.description %>
           </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
           <div class="price">
             <%= number_to_currency(item.price, :unit => "&euro;") %>
           </div>
+        </td>
+    </tr>
+    <tr>
+    	<td>
           <div class="links">
 
             <a href="/cart/<%= item.id %>">Add to Cart</a><br><br>
@@ -35,8 +49,7 @@
       </tr>
 
 </table>
-
-
+	
 <% if user_signed_in? && current_user.admin? %>
 
     <p><%= link_to 'New item', new_item_path %></p>

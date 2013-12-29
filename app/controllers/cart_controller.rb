@@ -41,7 +41,6 @@ class CartController < ApplicationController
   end
 
   def checkout
-  	puts("555555555555555555555555555555555555555555555555")
     # Step 1: Get the current user
     # @user = User.find(.id)
     puts(current_user.id)

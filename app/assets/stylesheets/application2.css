@@ -40,9 +40,11 @@ legend{
 	margin-right: auto;
 }
 
-table{
-	text-align: center;
-	display: inline;
+#table{
+	width: 1150px;
+	height: 250px;
+	text-align: left;
+	position: center;	
 }
 
 /* overflow-y: scroll prevents Login from moving onto next line - I think it trims the y axis */
