@@ -2,7 +2,7 @@
 
 <p>
   <strong>Order id:</strong>
-  <%= @orderitems.id %>
+  <%= @order.id %>
 </p>
 
 <p>
@@ -10,10 +10,6 @@
   <%= @order.user_id %>
 </p>
 
-<p>
-  <strong>OrderItems:</strong>
-  <%= @orderitems.__id__ %>
-</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
