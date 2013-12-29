@@ -1,0 +1,15 @@
+<h1>Past Orders</h1>
+<% if @pastorders.empty? then %>
+	Go Buy so stuff
+<% else %>
+	<% @pastorders.each do |pastorder| %>
+          <ul>
+            <li>
+			Bought on the <%= pastorder.created_at %>
+			<% pastorder.items.each do |item| %>
+				, <%= item.title %>
+			<% end %>
+		    </li>
+          </ul>
+	<% end %>
+<% end %>
